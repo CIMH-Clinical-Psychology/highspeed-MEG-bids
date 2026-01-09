@@ -13,6 +13,7 @@ import mne_bids
 import events_conversion
 import shutil
 from mne_bids import BIDSPath, write_raw_bids, write_anat
+from mne_bids import write_meg_crosstalk, write_meg_calibration
 import misc
 import stimer
 from stimer import ContextProfiler
@@ -25,7 +26,7 @@ bids_root_path = os.path.abspath(os.path.dirname(vars().get('__file__', '')) + '
 
 subjects = [x for x in os.listdir(f'{raw_files_folder}/data-MEG/') if x.startswith('mfr')]
 print(f'{len(subjects)=} subjects found')
-
+# asd
 #%% convert to BIDS
 reports = []
 for subj in tqdm(sorted(subjects), desc='processing subjects'):
@@ -33,15 +34,25 @@ for subj in tqdm(sorted(subjects), desc='processing subjects'):
     subj_id = subj.split('_', 1)[-1]
     assert len(subj_id)==2
 
-    subj_folder = f'{raw_files_folder}/data-MEG/{subj}/'
-    files_subj = [x for x in os.listdir(subj_folder) if x.endswith('fif')]
 
-    ### 1) first convert the two resting states
+    fif_folders = misc.list_files(
+        f'{raw_files_folder}/data-MEG/{subj}/',
+        only_folders=True
+    )
+    assert len(fif_folders) == 1, f"fif_folders>1 for subject {subj}: {fif_folders}"
+
+    fif_folder = fif_folders[0]
+
+    files_subj = [x for x in os.listdir(fif_folder) if x.endswith('mc.fif')]
+
+    #### 1) first convert the two resting states
     # bids_path = BIDSPath(subject=subj_id, root=bids_root)
     for rs in [1, 2]:
         fif_file = [x for x in files_subj if f'_rs{rs}_' in x]
         assert len(fif_file)==1
-        raw = mne.io.read_raw_fif(f'{subj_folder}/{fif_file[0]}')
+        raw = mne.io.read_raw_fif(f'{fif_folder}/{fif_file[0]}')
+        assert misc.check_maxfilter(raw)=='mne-tsss'
+        [h for h in raw.info['proc_history']]
         raw, report = misc.check_and_fix_channels(raw)
         events = mne.find_events(raw, min_duration=3/raw.info['sfreq'])
         event_id = {'resting state start': 1, 'resting state stop': 2}
@@ -62,10 +73,12 @@ for subj in tqdm(sorted(subjects), desc='processing subjects'):
                        )
         reports += [report]
 
-    ### 2) next convert the main data
+    #### 2) next convert the main data
     fif_file = [x for x in files_subj if f'_main_' in x and x.endswith('.fif') and 'tsss' in x and not '-1.' in x]
     assert len(fif_file)==1
-    raw = mne.io.read_raw_fif(f'{subj_folder}/{fif_file[0]}')
+    raw = mne.io.read_raw_fif(f'{fif_folder}/{fif_file[0]}')
+    assert misc.check_maxfilter(raw)=='mne-tsss'
+
     raw, report = misc.check_and_fix_channels(raw)
     reports += [report]
 
@@ -102,8 +115,17 @@ for subj in tqdm(sorted(subjects), desc='processing subjects'):
                     verbose=True
                    )
 
+    #### 3) crosstalk and calibration files
+    bids_task_cal = BIDSPath(subject=subj_id,
+                             datatype='meg',
+                             root=bids_root_path)
+    cal_fname = os.path.join(raw_files_folder, "sss_cal.dat")
+    ct_fname = os.path.join(raw_files_folder, "ct_sparse.fif")
 
-    ### 3) behavioural data
+    write_meg_calibration(cal_fname, bids_task_cal)
+    write_meg_crosstalk(ct_fname, bids_task_cal)
+
+    #### 4) behavioural data
     # basically sourdedata is a fractal BIDS folder
     bids_task_source = BIDSPath(subject=subj_id,
                          datatype='beh',
@@ -131,8 +153,8 @@ for subj in tqdm(sorted(subjects), desc='processing subjects'):
                    na_rep='NaN')
 
     # asd
-    # ### 4) MRI data
-    #### MRI DATA IS ALREADY CONVERTED VIA HEUDICONV
+    #### 5) MRI data
+    ### MRI DATA IS ALREADY CONVERTED VIA HEUDICONV
     # t1w_path = BIDSPath(subject=subj_id,
     #                     datatype='anat',
     #                     # task=f'T1w',

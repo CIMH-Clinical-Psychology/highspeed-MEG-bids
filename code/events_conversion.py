@@ -1,4 +1,4 @@
-# This script converts psychopy log files into a single CSV.
+# This script contains functions that convert psychopy log files into a single CSV.
 
 # target format is similar to this https://gin.g-node.org/lnnrtwttkhn/highspeed-bids/src/master/sub-01/ses-01/func/sub-01_ses-01_task-highspeed_rec-prenorm_run-03_events.tsv
 import pandas as pd
@@ -317,4 +317,5 @@ def convert_psychopy_to_bids(csv_file):
 
         else:
             raise ValueError('this is unknown')
+    assert len(df_run_bids)>100, f'to few rows in {csv_file=}'
     return df_run_bids
