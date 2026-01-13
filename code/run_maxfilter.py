@@ -17,7 +17,7 @@ import mne
 import misc
 from mne.preprocessing import find_bad_channels_maxwell
 import pandas as pd
-
+import joblib
 
 mne.set_config("MNE_USE_NUMBA", "true")
 mne.set_config("MNE_USE_CUDA", "true")
@@ -31,6 +31,8 @@ crosstalk_file = os.path.abspath("./calibration_files/ct_sparse.fif")
 assert os.path.isfile(fine_cal_file)
 assert os.path.isfile(crosstalk_file)
 
+mem = joblib.memory.Memory('./joblib-cache/')
+find_bad_channels_maxwell_cached = mem.cache(find_bad_channels_maxwell)
 
 def run_maxfiltering(subject):
     assert isinstance(subject, int)
@@ -56,7 +58,7 @@ def run_maxfiltering(subject):
         assert len(file) == 1
         raw = mne.io.read_raw(file[0], preload=True)
 
-        auto_noisy_chs, auto_flat_chs = find_bad_channels_maxwell(
+        auto_noisy_chs, auto_flat_chs = find_bad_channels_maxwell_cached(
             raw,
             cross_talk=crosstalk_file,
             calibration=fine_cal_file,
@@ -99,18 +101,17 @@ def run_maxfiltering(subject):
                         )
 
     # prepare empty room recording projection vectors for eSSS
-    # raw_er = misc.get_closest_raw(raw, raw_empty_rooms)
-    # raw_er_prep = mne.preprocessing.maxwell_filter_prepare_emptyroom(raw_er, raw=raw)
-    # extended_proj = mne.compute_proj_raw(
-    #                     raw_er_prep.pick('meg'),
-    #                     n_grad=3,
-    #                     n_mag=3,
-    #                     meg="separate",
-    #                 )
+    raw_er = misc.get_closest_raw(raw, raw_empty_rooms)
+    extended_proj = mne.compute_proj_raw(
+                        raw_er.pick('meg'),
+                        n_grad=3,
+                        n_mag=3,
+                        meg="combined",
+                    )
 
     # --- second pass: Maxwell filtering with tSSS and eSSS---
     for task, raw in raws.items():
-        out = str(raw.filenames[0]).replace(".fif", "_trans[main]_tsss_mc.fif")
+        out = str(raw.filenames[0]).replace(".fif", "_trans[main]_etsss_mc.fif")
         if os.path.isfile(out):
             print(f'{subject}-{task} already computed! skip.')
             continue
@@ -120,7 +121,7 @@ def run_maxfiltering(subject):
             cross_talk=crosstalk_file,
             st_duration=10.0,          # tSSS
             head_pos=headpos[task],
-            # extended_proj=extended_proj,
+            extended_proj=extended_proj,
             destination=dest,          # rotate to main mean head position
             coord_frame="head",
             verbose=True,
@@ -132,10 +133,14 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--subject",
-        required=True,
         type=int,
         help="Subject number (e.g. 1 or 01)"
     )
     args = parser.parse_args()
 
-    run_maxfiltering(args.subject)
+    if args.subject:
+        run_maxfiltering(args.subject)
+    else:
+        print('No --subject supplied, will run for all 30 participants')
+        for i in range(1, 31):
+            run_maxfiltering(i)
