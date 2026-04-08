@@ -31,10 +31,14 @@ freeze: venv
 .PHONY: anat
 anat:
 	@$(foreach sub,$(SUBJECTS), \
-		docker run --rm -u $(USER_ID):$(GROUP_ID) -v $(CURDIR)/../Fast-Replay-MEG/data-MRI/:/input:ro -v $(CURDIR):/output:rw -v $(CURDIR)/code:/code:ro \
+		docker run --rm -u $(USER_ID):$(GROUP_ID) -v $(CURDIR)/../highspeed-MEG-raw/data-MRI/:/input:ro -v $(CURDIR):/output:rw -v $(CURDIR)/code:/code:ro \
 		nipy/heudiconv:$(HEUDICONV_VERSION) -d /input/MFR{subject}/*IMA \
 		-s $(sub) -o /output -f code/heudiconv_heuristic.py -c dcm2niix --bids --overwrite;)
 
 .PHONY: defacing
 defacing:
 	sh code/defacing.sh $(CURDIR)
+
+.PHONY: bids
+bids:
+	python code/convert_to_bids.py

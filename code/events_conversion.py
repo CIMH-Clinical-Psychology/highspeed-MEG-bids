@@ -54,13 +54,25 @@ def json_decode(cell):
 
 
 #%% actual conversion code
-output_dir = 'Z:/Fast-Replay-7T/output/'
-psychopy_data = 'Z:/Fast-Replay-7T/data_cleaned' # directory where psychopy log files for the experiment are stored
 
 # some definitions
 intervals = np.array([32, 64, 128, 512])
 stimuli = ['gesicht', 'haus', 'katze', 'schuh', 'stuhl']
 key_mapping = {'r': 'right', 'y': 'down', 'b': 'right', 'g': 'left'}
+
+
+def _fix_rt(csv_rt, component_started, log_keypresses, max_duration=1.6):
+    """Fix response_time for early PsychoPy recordings where rt is stored relative
+    to a global keyboard clock (yielding large negative values) instead of relative
+    to the trial-level component onset. Recovers correct RT from log keypress timestamps.
+    """
+    if csv_rt >= 0:
+        return csv_rt
+    # find log keypress within this component's time window
+    for kp_t in log_keypresses:
+        if component_started <= kp_t <= component_started + max_duration:
+            return round(kp_t - component_started, 4)
+    return np.nan  # no matching keypress found
 
 
 def convert_psychopy_to_bids(csv_file):
@@ -70,12 +82,16 @@ def convert_psychopy_to_bids(csv_file):
         # build lookup dictionary
         # this is increasingly ugly, but it creates a nested dict of a nested dict
         log_dict = defaultdict(lambda: defaultdict(dict))
+        log_keypresses = []  # list of absolute keypress timestamps from DATA lines
         for line in loglines:
             t, lvl, msg = [x.strip() for x in line.split('\t', 3)]
+            if lvl == 'DATA':
+                if msg.startswith('Keypress:'):
+                    log_keypresses.append(float(t))
+                continue
             if msg.startswith('Created'): continue  # ignore creation events
             if not ' = ' in msg: continue  # only record property assignments
             if not ': ' in msg: continue  # only record property assignments
-            if lvl=='DATA': continue  # ignore keypresses
             cmp_name, msg = msg.split(': ', 1)
             prop, val = msg.split(' = ', 1)
             log_dict[float(t)][cmp_name][prop] = val
@@ -145,7 +161,7 @@ def convert_psychopy_to_bids(csv_file):
                     stim_label= stim_label,
                     orientation=orientation,
                     interval_time=line[f'localizer_isi.stopped'] - line[f'localizer_isi.started'],
-                    response_time=line['key_resp_localizer.rt'] if 'key_resp_localizer.rt' in line else np.nan,
+                    response_time=_fix_rt(line['key_resp_localizer.rt'], line['key_resp_localizer.started'], log_keypresses) if 'key_resp_localizer.rt' in line else np.nan,
                     accuracy= ('key_resp_localizer.rt' in line)==(orientation=='180')
                     )
                     # accuracy=
@@ -265,7 +281,7 @@ def convert_psychopy_to_bids(csv_file):
                     condition=condition,
                     trial_type= 'choice',
                     stim_label= 'choice',
-                    response_time=line['question_key_resp.rt'] if 'question_key_resp.rt' in line else np.nan,
+                    response_time=_fix_rt(line['question_key_resp.rt'], line['question_key_resp.started'], log_keypresses, max_duration=3.0) if 'question_key_resp.rt' in line else np.nan,
                     key_down=key_down,
                     key_expected=key_expected,
                     key_pressed=bool('question_key_resp.rt' in line),

@@ -15,6 +15,18 @@ import datetime
 
 joblib_load = cache(_joblib_load)
 
+def make_maxfilter_filename(filename, method='tsss', trans=None, mc=True):
+    """return a valid maxfilter file name, ignoring mne conventions"""
+    assert method in ['tsss', 'sss', 'etsss', 'esss']
+    file, ext = os.path.splitext(filename)
+
+    maxfilter_name = file + (f'_trans[{trans}]'  if trans else '')
+    maxfilter_name += f'_{method}'
+    maxfilter_name += '_mc' if mc else ''
+    maxfilter_name += ext
+
+    return maxfilter_name
+
 def check_and_fix_channels(raw):
     """check for missing channels or empty channels or NaN channels"""
     report = {'filename': os.path.basename(raw._filenames[0]),

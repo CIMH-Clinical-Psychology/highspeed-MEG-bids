@@ -35,22 +35,16 @@ for subj in tqdm(subjects, desc='processing subjects'):
     subj_id = subj.split('_', 1)[-1]
     assert len(subj_id)==2
 
-    fif_folders = misc.list_files(
-        f'{raw_files_folder}/data-MEG/{subj}/',
-        only_folders=True
-    )
-    assert len(fif_folders) == 1, f"fif_folders>1 for subject {subj}: {fif_folders}"
+    etsss_folder = f'{raw_files_folder}/data-MEG/{subj}/etsss/'
 
-    fif_folder = fif_folders[0]
-
-    files_subj = [x for x in os.listdir(fif_folder) if x.endswith('mc.fif')]
+    files_subj = misc.list_files(etsss_folder, patterns='*etsss_mc.fif')
 
     #### 1) first convert the two resting states
     # bids_path = BIDSPath(subject=subj_id, root=bids_root)
     for rs in [1, 2]:
         fif_file = [x for x in files_subj if f'_rs{rs}_' in x]
-        assert len(fif_file)==1
-        raw = mne.io.read_raw_fif(f'{fif_folder}/{fif_file[0]}')
+        assert len(fif_file)==1, f'{fif_file=} for {subj=}'
+        raw = mne.io.read_raw_fif(fif_file[0])
         assert misc.check_maxfilter(raw)=='mne-tsss'
         [h for h in raw.info['proc_history']]
         raw, report = misc.check_and_fix_channels(raw)
@@ -74,9 +68,9 @@ for subj in tqdm(subjects, desc='processing subjects'):
         reports += [report]
 
     #### 2) next convert the main data
-    fif_file = [x for x in files_subj if f'_main_' in x and x.endswith('.fif') and 'tsss' in x and not '-1.' in x]
+    fif_file = [x for x in files_subj if '_main_' in x and x.endswith('.fif') and 'etsss' in x and not '-1.' in x]
     assert len(fif_file)==1, f'no main file for {subj=}'
-    raw = mne.io.read_raw_fif(f'{fif_folder}/{fif_file[0]}')
+    raw = mne.io.read_raw_fif(f'{fif_file[0]}')
     assert misc.check_maxfilter(raw)=='mne-tsss', f'not mne maxfiltered {subj=}'
 
     raw, report = misc.check_and_fix_channels(raw)
@@ -102,7 +96,7 @@ for subj in tqdm(subjects, desc='processing subjects'):
 
     bids_task_main= BIDSPath(subject=subj_id,
                              datatype='meg',
-                             task=f'main',
+                             task='main',
                              root=bids_root_path)
     write_raw_bids(raw=raw,
                     bids_path=bids_task_main,
@@ -129,7 +123,7 @@ for subj in tqdm(subjects, desc='processing subjects'):
     # basically sourdedata is a fractal BIDS folder
     bids_task_source = BIDSPath(subject=subj_id,
                          datatype='beh',
-                         task=f'main',
+                         task='main',
                          root=bids_root_path + '/sourcedata/')
     bids_task_source.mkdir()
 
@@ -138,7 +132,7 @@ for subj in tqdm(subjects, desc='processing subjects'):
     files_subj = [x for x in os.listdir(subj_folder) if x.endswith('csv') ]
     files_subj = [x for x in files_subj if (('main_' in x) & x.startswith(f'{int(subj_id):02d}'))]
     files_subj = [f'{subj_folder}/{x}' for x in files_subj]
-    assert len(files_subj)==1
+    assert len(files_subj)==1, f'no csv file found for {subj=} {files_subj=}'
     csv_file = files_subj[0]
     log_file = files_subj[0][:-3] + 'log'
     shutil.copy(log_file, str(bids_task_source.fpath) + '.log')

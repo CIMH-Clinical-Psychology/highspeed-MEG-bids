@@ -18,9 +18,10 @@ import misc
 from mne.preprocessing import find_bad_channels_maxwell
 import pandas as pd
 import joblib
+from pathlib import Path
 
-mne.set_config("MNE_USE_NUMBA", "true")
-mne.set_config("MNE_USE_CUDA", "true")
+# mne.set_config("MNE_USE_NUMBA", "true")
+# mne.set_config("MNE_USE_CUDA", "true")
 
 raw_meg_files_folder = '/zi/flstorage/group_klips/data/data/Simon/highspeed/highspeed-MEG-raw/data-MEG/'
 raw_empty_rooms = '/zi/flstorage/group_klips/data/data/Simon/highspeed/highspeed-MEG-raw/data-empty-room/'
@@ -34,20 +35,31 @@ assert os.path.isfile(crosstalk_file)
 mem = joblib.memory.Memory('./joblib-cache/')
 find_bad_channels_maxwell_cached = mem.cache(find_bad_channels_maxwell)
 
+
 def run_maxfiltering(subject):
     assert isinstance(subject, int)
 
-    folders = misc.list_files(
-        f"{raw_meg_files_folder}/mfr_{subject:02d}/",
-        only_folders=True
-    )
-    assert len(folders) == 1, f"more than one folder for subject {subject}: {folders}"
+    subj_folder = Path(raw_meg_files_folder, f'mfr_{subject:02d}/')
+    etsss_folder = subj_folder / 'etsss'
+    etsss_folder.mkdir(exist_ok=True)
 
     files = {
-        "main": misc.list_files(folders[0], patterns="*main.fif"),
-        "rest1": misc.list_files(folders[0], patterns="*rs1.fif"),
-        "rest2": misc.list_files(folders[0], patterns="*rs2.fif"),
+        "main": misc.list_files(subj_folder, patterns="*main.fif", recursive=True),
+        "rest1": misc.list_files(subj_folder, patterns="*rs1.fif", recursive=True),
+        "rest2": misc.list_files(subj_folder, patterns="*rs2.fif", recursive=True),
     }
+
+    # if all three exist, perform early exit
+    exist = 0
+    for task, file in files.items():
+        base = os.path.basename(file[0])
+        out = misc.make_maxfilter_filename(base, 'etsss', trans='main',mc=True)
+        if os.path.isfile(etsss_folder / out):
+            exist += 1
+    if exist==3:
+        print('All three files already exist! Nothing to do.')
+        return
+
 
     df = pd.DataFrame()
 
@@ -55,7 +67,8 @@ def run_maxfiltering(subject):
     headpos = {}
 
     for task, file in files.items():
-        assert len(file) == 1
+
+        assert len(file) == 1, f'more than one file for {subject=} {file=}'
         raw = mne.io.read_raw(file[0], preload=True)
 
         auto_noisy_chs, auto_flat_chs = find_bad_channels_maxwell_cached(
@@ -92,7 +105,7 @@ def run_maxfiltering(subject):
         raws[task] = raw
         headpos[task] = head_pos
 
-    df.to_csv(folders[0] + '/bad_chs.csv', index=False)
+    df.to_csv(subj_folder / 'bad_chs.csv', index=False)
 
 
     # --- reference transform from main task ---
@@ -111,11 +124,15 @@ def run_maxfiltering(subject):
 
     # --- second pass: Maxwell filtering with tSSS and eSSS---
     for task, raw in raws.items():
-        out = str(raw.filenames[0]).replace(".fif", "_trans[main]_etsss_mc.fif")
+
+        out = etsss_folder / raw.filenames[0].name
+        out = str(out).replace(".fif", "_trans[main]_etsss_mc.fif")
+
         if os.path.isfile(out):
             print(f'{subject}-{task} already computed! skip.')
             continue
-        raw_sss = mne.preprocessing.maxwell_filter(
+
+        raw_etsss = mne.preprocessing.maxwell_filter(
             raw,
             calibration=fine_cal_file,
             cross_talk=crosstalk_file,
@@ -127,7 +144,7 @@ def run_maxfiltering(subject):
             verbose=True,
         )
 
-        raw_sss.save(out, overwrite=True)
+        raw_etsss.save(out)
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -142,5 +159,5 @@ if __name__ == "__main__":
         run_maxfiltering(args.subject)
     else:
         print('No --subject supplied, will run for all 30 participants')
-        for i in range(1, 31):
+        for i in range(12, 31):
             run_maxfiltering(i)
