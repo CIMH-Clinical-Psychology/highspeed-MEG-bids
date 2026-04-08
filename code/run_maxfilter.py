@@ -16,6 +16,7 @@ import numpy as np
 import argparse
 import mne
 import misc
+from dotenv import dotenv_values
 from mne.preprocessing import find_bad_channels_maxwell
 import pandas as pd
 import joblib
@@ -26,8 +27,9 @@ from pathlib import Path
 
 script_dir = os.path.dirname(__file__)
 
-raw_meg_files_folder = os.path.abspath(f'{script_dir}/../../highspeed-MEG-raw/data-MEG/')
-raw_empty_rooms = os.path.abspath(f'{script_dir}/../../highspeed-MEG-raw/data-empty-room/')
+cfg = dotenv_values(f'{script_dir}/config.env')
+raw_meg_files_folder = f"{cfg['RAW_DIR']}/data-MEG/"
+raw_empty_rooms = f"{cfg['RAW_DIR']}/data-empty-room/"
 
 fine_cal_file = os.path.abspath(f"{script_dir}/calibration_files/sss_cal.dat")
 crosstalk_file = os.path.abspath(f"{script_dir}/calibration_files/ct_sparse.fif")

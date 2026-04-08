@@ -1,4 +1,5 @@
 # variables:
+include code/config.env
 VENV_DIR = venv
 PYTHON = python3
 PIP = $(VENV_DIR)/bin/pip
@@ -31,7 +32,7 @@ freeze: venv
 .PHONY: anat
 anat:
 	@$(foreach sub,$(SUBJECTS), \
-		docker run --rm -u $(USER_ID):$(GROUP_ID) -v $(CURDIR)/../highspeed-MEG-raw/data-MRI/:/input:ro -v $(CURDIR):/output:rw -v $(CURDIR)/code:/code:ro \
+		docker run --rm -u $(USER_ID):$(GROUP_ID) -v $(RAW_DIR)/data-MRI/:/input:ro -v $(CURDIR):/output:rw -v $(CURDIR)/code:/code:ro \
 		nipy/heudiconv:$(HEUDICONV_VERSION) -d /input/MFR{subject}/*IMA \
 		-s $(sub) -o /output -f code/heudiconv_heuristic.py -c dcm2niix --bids --overwrite;)
 

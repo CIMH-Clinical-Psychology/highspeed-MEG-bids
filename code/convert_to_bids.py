@@ -8,6 +8,7 @@ Created on Mon Oct 21 09:37:28 2024
 import os
 import mne
 from pathlib import Path
+from dotenv import dotenv_values
 from tqdm import tqdm
 import mne_bids
 import events_conversion
@@ -17,8 +18,8 @@ from mne_bids import write_meg_crosstalk, write_meg_calibration
 import misc
 import stimer
 from stimer import ContextProfiler
-# change this to the raw file folder
-raw_files_folder = '/zi/flstorage/group_klips/data/data/Simon/highspeed/highspeed-MEG-raw/'
+cfg = dotenv_values(f'{os.path.dirname(__file__)}/config.env')
+raw_files_folder = cfg['RAW_DIR']
 
 bids_root_path = os.path.abspath(os.path.dirname(vars().get('__file__', '')) + '/../')
 # bids_root = BIDSPath(root=bids_root_path)

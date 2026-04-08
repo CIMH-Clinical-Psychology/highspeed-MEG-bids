@@ -4,9 +4,7 @@ BIDS dataset for the MEG replication of Wittkuhn et al 2021.
 
 ## Creating the BIDS-dataset
 
-This repository already contains the final BIDS dataset. For most purposes you can stop reading here. If you have the raw data, you can replicate the process by the following commands to convert the raw data to BIDS. The raw data have not been uploaded, so this is more for transparency and as a reminder for myself. Note: Beforehand you might need to edit paths in the Makefile and in convert_to_bids.py.
-
-It is assumed that the raw data is in `../highspeed-MEG-raw/*` and your current working dir is the directory of this README
+This repository already contains the final BIDS dataset. For most purposes you can stop reading here. If you have the raw data, you can replicate the process by the following commands to convert the raw data to BIDS. The raw data have not been uploaded, so this is more for transparency and as a reminder for myself. Note: Beforehand you might need to edit the path to the raw data in your `code/config.env`
 
 
 
