@@ -39,6 +39,6 @@ anat:
 defacing:
 	sh code/defacing.sh $(CURDIR)
 
-.PHONY: bids
-bids:
+.PHONY: meg
+meg:
 	python code/convert_to_bids.py

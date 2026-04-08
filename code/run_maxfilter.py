@@ -12,6 +12,7 @@ advantage:
 """
 
 import os
+import numpy as np
 import argparse
 import mne
 import misc
@@ -23,11 +24,13 @@ from pathlib import Path
 # mne.set_config("MNE_USE_NUMBA", "true")
 # mne.set_config("MNE_USE_CUDA", "true")
 
-raw_meg_files_folder = '/zi/flstorage/group_klips/data/data/Simon/highspeed/highspeed-MEG-raw/data-MEG/'
-raw_empty_rooms = '/zi/flstorage/group_klips/data/data/Simon/highspeed/highspeed-MEG-raw/data-empty-room/'
+script_dir = os.path.dirname(__file__)
 
-fine_cal_file = os.path.abspath("./calibration_files/sss_cal.dat")
-crosstalk_file = os.path.abspath("./calibration_files/ct_sparse.fif")
+raw_meg_files_folder = os.path.abspath(f'{script_dir}/../../highspeed-MEG-raw/data-MEG/')
+raw_empty_rooms = os.path.abspath(f'{script_dir}/../../highspeed-MEG-raw/data-empty-room/')
+
+fine_cal_file = os.path.abspath(f"{script_dir}/calibration_files/sss_cal.dat")
+crosstalk_file = os.path.abspath(f"{script_dir}/calibration_files/ct_sparse.fif")
 
 assert os.path.isfile(fine_cal_file)
 assert os.path.isfile(crosstalk_file)
@@ -38,7 +41,7 @@ find_bad_channels_maxwell_cached = mem.cache(find_bad_channels_maxwell)
 
 def run_maxfiltering(subject):
     assert isinstance(subject, int)
-
+    np.random.seed(subject)
     subj_folder = Path(raw_meg_files_folder, f'mfr_{subject:02d}/')
     etsss_folder = subj_folder / 'etsss'
     etsss_folder.mkdir(exist_ok=True)
@@ -66,6 +69,7 @@ def run_maxfiltering(subject):
     raws = {}
     headpos = {}
 
+    # first get head position for all participants
     for task, file in files.items():
 
         assert len(file) == 1, f'more than one file for {subject=} {file=}'
@@ -122,7 +126,7 @@ def run_maxfiltering(subject):
                         meg="combined",
                     )
 
-    # --- second pass: Maxwell filtering with tSSS and eSSS---
+    # --- second: Maxwell filtering with tSSS and eSSS---
     for task, raw in raws.items():
 
         out = etsss_folder / raw.filenames[0].name
@@ -159,5 +163,5 @@ if __name__ == "__main__":
         run_maxfiltering(args.subject)
     else:
         print('No --subject supplied, will run for all 30 participants')
-        for i in range(12, 31):
+        for i in range(1, 31):
             run_maxfiltering(i)

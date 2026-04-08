@@ -21,6 +21,8 @@ run it either by `python code/run_maxfilter.py` or if you have SLURM, use the `r
 sha
 
 ```bash
+make venv
+make install
 make anat
 make defacing
 make bids
