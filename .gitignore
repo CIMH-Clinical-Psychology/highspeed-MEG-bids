@@ -1,3 +1,10 @@
+# do not upload MRI images and ignore some other files
+.heudiconv/
+sourcedata/
+sub-*/anat/
+*.nii.gz
+*.nii
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

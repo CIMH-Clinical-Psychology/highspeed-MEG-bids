@@ -1,0 +1,837 @@
+﻿onset	duration	trial_type	value	sample
+27.469	0.0	fixation pre 1	81	27469
+31.277	0.0	localizer Chair onset	5	31277
+35.716	0.0	localizer House onset	2	35716
+38.687	0.0	localizer House onset	2	38687
+42.024	0.0	localizer Face onset	1	42024
+45.647	0.0	localizer Face onset	1	45647
+49.534	0.0	localizer Shoe onset	4	49534
+50.098	0.0	localizer sound error	30	50098
+52.438	0.0	localizer Chair onset	5	52438
+54.624	0.0	localizer Shoe distractor onset	104	54624
+55.255	0.0	localizer sound coin	31	55255
+57.394	0.0	localizer Cat onset	3	57394
+61.049	0.0	localizer Shoe onset	4	61049
+64.738	0.0	localizer Shoe onset	4	64738
+67.992	0.0	localizer House distractor onset	102	67992
+68.606	0.0	localizer sound coin	31	68606
+71.53	0.0	localizer Shoe onset	4	71530
+74.584	0.0	localizer Face onset	1	74584
+77.805	0.0	localizer House onset	2	77805
+81.343	0.0	localizer Cat distractor onset	103	81343
+81.857	0.0	localizer sound coin	31	81857
+84.13	0.0	localizer House onset	2	84130
+87.017	0.0	localizer Chair distractor onset	105	87017
+87.645	0.0	localizer sound coin	31	87645
+89.971	0.0	localizer Chair onset	5	89971
+94.11	0.0	localizer Face distractor onset	101	94110
+94.74	0.0	localizer sound coin	31	94740
+98.198	0.0	localizer Cat onset	3	98198
+102.137	0.0	localizer Cat onset	3	102137
+105.524	0.0	localizer Chair onset	5	105524
+107.744	0.0	localizer Cat onset	3	107744
+111.033	0.0	localizer Face onset	1	111033
+113.482	0.0	fixation pre 2	82	113482
+116.989	0.0	cue Shoe	14	116989
+120.335	0.0	sequence House onset	22	120335
+120.457	0.0	sequence Face onset	21	120457
+120.591	0.0	sequence Chair onset	25	120591
+120.724	0.0	sequence Cat onset	23	120724
+120.858	0.0	sequence Shoe onset	24	120858
+120.992	0.0	Sequence Buffer start	61	120992
+129.531	0.0	Sequence Buffer stop	62	129531
+130.288	0.0	sequencesound coin	71	130288
+130.789	0.0	cue Shoe	14	130789
+134.105	0.0	sequence Face onset	21	134105
+134.276	0.0	sequence House onset	22	134276
+134.442	0.0	sequence Cat onset	23	134442
+134.609	0.0	sequence Shoe onset	24	134609
+134.776	0.0	sequence Chair onset	25	134776
+134.943	0.0	Sequence Buffer start	61	134943
+143.318	0.0	Sequence Buffer stop	62	143318
+144.022	0.0	sequencesound coin	71	144022
+144.525	0.0	cue Cat	13	144525
+147.839	0.0	sequence Face onset	21	147839
+148.461	0.0	sequence House onset	22	148461
+149.079	0.0	sequence Chair onset	25	149079
+149.696	0.0	sequence Shoe onset	24	149696
+150.33	0.0	sequence Cat onset	23	150330
+150.948	0.0	Sequence Buffer start	61	150948
+157.104	0.0	Sequence Buffer stop	62	157104
+157.824	0.0	sequencesound coin	71	157824
+158.326	0.0	cue House	12	158326
+161.64	0.0	sequence House onset	22	161640
+162.262	0.0	sequence Cat onset	23	162262
+162.88	0.0	sequence Chair onset	25	162880
+163.497	0.0	sequence Shoe onset	24	163497
+164.115	0.0	sequence Face onset	21	164115
+164.732	0.0	Sequence Buffer start	61	164732
+170.891	0.0	Sequence Buffer stop	62	170891
+171.475	0.0	sequencesound coin	71	171475
+171.977	0.0	cue House	12	171977
+175.29	0.0	sequence Cat onset	23	175290
+175.446	0.0	sequence Shoe onset	24	175446
+175.613	0.0	sequence Chair onset	25	175613
+175.78	0.0	sequence House onset	22	175780
+175.947	0.0	sequence Face onset	21	175947
+176.114	0.0	Sequence Buffer start	61	176114
+184.496	0.0	Sequence Buffer stop	62	184496
+185.06	0.0	sequencesound coin	71	185060
+185.562	0.0	cue Face	11	185562
+188.875	0.0	sequence Chair onset	25	188875
+188.998	0.0	sequence Shoe onset	24	188998
+189.131	0.0	sequence House onset	22	189131
+189.265	0.0	sequence Face onset	21	189265
+189.398	0.0	sequence Cat onset	23	189398
+189.532	0.0	Sequence Buffer start	61	189532
+198.074	0.0	Sequence Buffer stop	62	198074
+198.761	0.0	sequencesound coin	71	198761
+199.265	0.0	cue Shoe	14	199265
+202.576	0.0	sequence House onset	22	202576
+202.816	0.0	sequence Chair onset	25	202816
+203.049	0.0	sequence Shoe onset	24	203049
+203.283	0.0	sequence Cat onset	23	203283
+203.517	0.0	sequence Face onset	21	203517
+203.75	0.0	Sequence Buffer start	61	203750
+211.809	0.0	Sequence Buffer stop	62	211809
+212.529	0.0	sequencesound coin	71	212529
+213.033	0.0	cue Face	11	213033
+216.345	0.0	sequence House onset	22	216345
+216.567	0.0	sequence Cat onset	23	216567
+216.801	0.0	sequence Chair onset	25	216801
+217.034	0.0	sequence Face onset	21	217034
+217.268	0.0	sequence Shoe onset	24	217268
+217.502	0.0	Sequence Buffer start	61	217502
+225.57	0.0	Sequence Buffer stop	62	225570
+226.197	0.0	sequencesound coin	71	226197
+226.698	0.0	fixation pre 1	81	226698
+230.506	0.0	localizer Shoe onset	4	230506
+233.794	0.0	localizer Cat onset	3	233794
+236.864	0.0	localizer Chair onset	5	236864
+239.952	0.0	localizer Face distractor onset	101	239952
+240.482	0.0	localizer sound coin	31	240482
+243.055	0.0	localizer Shoe onset	4	243055
+246.76	0.0	localizer Face onset	1	246760
+250.432	0.0	localizer Cat distractor onset	103	250432
+250.929	0.0	localizer sound coin	31	250929
+253.653	0.0	localizer House onset	2	253653
+257.258	0.0	localizer Cat onset	3	257258
+260.645	0.0	localizer Face onset	1	260645
+263.95	0.0	localizer House distractor onset	102	263950
+264.447	0.0	localizer sound coin	31	264447
+266.787	0.0	localizer Chair onset	5	266787
+269.507	0.0	localizer House onset	2	269507
+272.828	0.0	localizer Shoe distractor onset	104	272828
+273.309	0.0	localizer sound coin	31	273309
+276.717	0.0	localizer House onset	2	276717
+279.554	0.0	localizer House onset	2	279554
+281.84	0.0	localizer Face onset	1	281840
+285.128	0.0	localizer Face onset	1	285128
+287.931	0.0	localizer Chair onset	5	287931
+289.934	0.0	localizer Chair onset	5	289934
+293.239	0.0	localizer Cat onset	3	293239
+296.676	0.0	localizer Cat onset	3	296676
+299.079	0.0	localizer Shoe onset	4	299079
+302.083	0.0	localizer Chair distractor onset	105	302083
+302.564	0.0	localizer sound coin	31	302564
+305.554	0.0	localizer Shoe onset	4	305554
+309.873	0.0	fixation pre 2	82	309873
+313.38	0.0	cue Shoe	14	313380
+316.693	0.0	sequence House onset	22	316693
+317.3	0.0	sequence Cat onset	23	317300
+317.932	0.0	sequence Chair onset	25	317932
+318.552	0.0	sequence Shoe onset	24	318552
+319.169	0.0	sequence Face onset	21	319169
+319.787	0.0	Sequence Buffer start	61	319787
+325.926	0.0	Sequence Buffer stop	62	325926
+326.463	0.0	sequencesound coin	71	326463
+326.965	0.0	cue Cat	13	326965
+330.278	0.0	sequence Face onset	21	330278
+330.434	0.0	sequence House onset	22	330434
+330.601	0.0	sequence Cat onset	23	330601
+330.767	0.0	sequence Shoe onset	24	330767
+330.934	0.0	sequence Chair onset	25	330934
+331.101	0.0	Sequence Buffer start	61	331101
+339.479	0.0	Sequence Buffer stop	62	339479
+340.431	0.0	sequencesound coin	71	340431
+340.933	0.0	cue Chair	15	340933
+344.246	0.0	sequence Cat onset	23	344246
+344.419	0.0	sequence Shoe onset	24	344419
+344.586	0.0	sequence Chair onset	25	344586
+344.753	0.0	sequence House onset	22	344753
+344.919	0.0	sequence Face onset	21	344919
+345.086	0.0	Sequence Buffer start	61	345086
+353.474	0.0	Sequence Buffer stop	62	353474
+354.149	0.0	sequencesound coin	71	354149
+354.652	0.0	cue Shoe	14	354652
+357.964	0.0	sequence Face onset	21	357964
+358.571	0.0	sequence House onset	22	358571
+359.188	0.0	sequence Chair onset	25	359188
+359.803	0.0	sequence Shoe onset	24	359803
+360.423	0.0	sequence Cat onset	23	360423
+361.041	0.0	Sequence Buffer start	61	361041
+367.182	0.0	Sequence Buffer stop	62	367182
+367.683	0.0	sequencesound coin	71	367683
+368.184	0.0	cue Shoe	14	368184
+371.497	0.0	sequence House onset	22	371497
+371.738	0.0	sequence Cat onset	23	371738
+371.972	0.0	sequence Chair onset	25	371972
+372.205	0.0	sequence Face onset	21	372205
+372.439	0.0	sequence Shoe onset	24	372439
+372.673	0.0	Sequence Buffer start	61	372673
+380.735	0.0	Sequence Buffer stop	62	380735
+381.418	0.0	sequencesound coin	71	381418
+381.921	0.0	cue House	12	381921
+385.234	0.0	sequence Chair onset	25	385234
+385.373	0.0	sequence Shoe onset	24	385373
+385.506	0.0	sequence House onset	22	385506
+385.64	0.0	sequence Face onset	21	385640
+385.773	0.0	sequence Cat onset	23	385773
+385.907	0.0	Sequence Buffer start	61	385907
+394.444	0.0	Sequence Buffer stop	62	394444
+395.453	0.0	sequencesound coin	71	395453
+395.956	0.0	cue Shoe	14	395956
+399.269	0.0	sequence House onset	22	399269
+399.391	0.0	sequence Face onset	21	399391
+399.525	0.0	sequence Chair onset	25	399525
+399.658	0.0	sequence Cat onset	23	399658
+399.792	0.0	sequence Shoe onset	24	399792
+399.925	0.0	Sequence Buffer start	61	399925
+408.465	0.0	Sequence Buffer stop	62	408465
+409.038	0.0	sequencesound coin	71	409038
+409.539	0.0	cue Shoe	14	409539
+412.853	0.0	sequence House onset	22	412853
+413.093	0.0	sequence Chair onset	25	413093
+413.326	0.0	sequence Shoe onset	24	413326
+413.56	0.0	sequence Cat onset	23	413560
+413.793	0.0	sequence Face onset	21	413793
+414.027	0.0	Sequence Buffer start	61	414027
+422.095	0.0	Sequence Buffer stop	62	422095
+422.72	0.0	sequence sound error	70	422720
+436.34	0.0	Break stop	92	436340
+436.351	0.0	fixation pre 1	81	436351
+440.148	0.0	localizer Chair distractor onset	105	440148
+440.846	0.0	localizer sound coin	31	440846
+444.338	0.0	localizer Face onset	1	444338
+448.209	0.0	localizer House onset	2	448209
+453.032	0.0	localizer Face onset	1	453032
+456.57	0.0	localizer Cat distractor onset	103	456570
+457.034	0.0	localizer sound coin	31	457034
+460.425	0.0	localizer Cat onset	3	460425
+464.03	0.0	localizer Face onset	1	464030
+467.251	0.0	localizer Face onset	1	467251
+470.421	0.0	localizer Shoe onset	4	470421
+473.492	0.0	localizer Cat onset	3	473492
+476.429	0.0	localizer Chair onset	5	476429
+480.234	0.0	localizer Shoe onset	4	480234
+483.406	0.0	localizer House onset	2	483406
+486.677	0.0	localizer House distractor onset	102	486677
+487.174	0.0	localizer sound coin	31	487174
+490.064	0.0	localizer Shoe onset	4	490064
+493.452	0.0	localizer Shoe distractor onset	104	493452
+493.933	0.0	localizer sound coin	31	493933
+496.99	0.0	localizer Chair onset	5	496990
+500.628	0.0	localizer Chair onset	5	500628
+504.367	0.0	localizer House onset	2	504367
+508.188	0.0	localizer Chair onset	5	508188
+511.76	0.0	localizer Cat onset	3	511760
+514.931	0.0	localizer House onset	2	514931
+518.502	0.0	localizer Cat onset	3	518502
+521.172	0.0	localizer Shoe onset	4	521172
+523.575	0.0	localizer Face distractor onset	101	523575
+524.089	0.0	localizer sound coin	31	524089
+527.494	0.0	fixation pre 2	82	527494
+531.0	0.0	cue House	12	531000
+534.312	0.0	sequence Chair onset	25	534312
+534.452	0.0	sequence Shoe onset	24	534452
+534.586	0.0	sequence House onset	22	534586
+534.719	0.0	sequence Face onset	21	534719
+534.853	0.0	sequence Cat onset	23	534853
+534.986	0.0	Sequence Buffer start	61	534986
+543.522	0.0	Sequence Buffer stop	62	543522
+544.333	0.0	sequencesound coin	71	544333
+544.836	0.0	cue Face	11	544836
+548.148	0.0	sequence Face onset	21	548148
+548.772	0.0	sequence House onset	22	548772
+549.389	0.0	sequence Chair onset	25	549389
+550.006	0.0	sequence Shoe onset	24	550006
+550.624	0.0	sequence Cat onset	23	550624
+551.241	0.0	Sequence Buffer start	61	551241
+557.387	0.0	Sequence Buffer stop	62	557387
+558.017	0.0	sequencesound coin	71	558017
+558.521	0.0	cue Cat	13	558521
+561.832	0.0	sequence House onset	22	561832
+562.055	0.0	sequence Chair onset	25	562055
+562.289	0.0	sequence Shoe onset	24	562289
+562.523	0.0	sequence Cat onset	23	562523
+562.756	0.0	sequence Face onset	21	562756
+562.99	0.0	Sequence Buffer start	61	562990
+571.044	0.0	Sequence Buffer stop	62	571044
+571.852	0.0	sequencesound coin	71	571852
+572.354	0.0	cue Face	11	572354
+575.667	0.0	sequence House onset	22	575667
+576.274	0.0	sequence Cat onset	23	576274
+576.891	0.0	sequence Chair onset	25	576891
+577.509	0.0	sequence Shoe onset	24	577509
+578.126	0.0	sequence Face onset	21	578126
+578.744	0.0	Sequence Buffer start	61	578744
+584.882	0.0	Sequence Buffer stop	62	584882
+585.554	0.0	sequencesound coin	71	585554
+586.056	0.0	cue Chair	15	586056
+589.369	0.0	sequence Face onset	21	589369
+589.542	0.0	sequence House onset	22	589542
+589.708	0.0	sequence Cat onset	23	589708
+589.875	0.0	sequence Shoe onset	24	589875
+590.042	0.0	sequence Chair onset	25	590042
+590.207	0.0	Sequence Buffer start	61	590207
+598.591	0.0	Sequence Buffer stop	62	598591
+599.272	0.0	sequencesound coin	71	599272
+599.775	0.0	cue Cat	13	599775
+603.087	0.0	sequence House onset	22	603087
+603.31	0.0	sequence Cat onset	23	603310
+603.543	0.0	sequence Chair onset	25	603543
+603.777	0.0	sequence Face onset	21	603777
+604.011	0.0	sequence Shoe onset	24	604011
+604.244	0.0	Sequence Buffer start	61	604244
+612.326	0.0	Sequence Buffer stop	62	612326
+612.957	0.0	sequencesound coin	71	612957
+613.457	0.0	cue Cat	13	613457
+616.771	0.0	sequence House onset	22	616771
+616.894	0.0	sequence Face onset	21	616894
+617.028	0.0	sequence Chair onset	25	617028
+617.161	0.0	sequence Cat onset	23	617161
+617.295	0.0	sequence Shoe onset	24	617295
+617.428	0.0	Sequence Buffer start	61	617428
+625.956	0.0	Sequence Buffer stop	62	625956
+626.574	0.0	sequencesound coin	71	626574
+627.078	0.0	cue House	12	627078
+630.39	0.0	sequence Cat onset	23	630390
+630.562	0.0	sequence Shoe onset	24	630562
+630.729	0.0	sequence Chair onset	25	630729
+630.896	0.0	sequence House onset	22	630896
+631.063	0.0	sequence Face onset	21	631063
+631.23	0.0	Sequence Buffer start	61	631230
+639.613	0.0	Sequence Buffer stop	62	639613
+640.225	0.0	sequencesound coin	71	640225
+640.726	0.0	fixation pre 1	81	640726
+644.534	0.0	localizer Shoe onset	4	644534
+647.455	0.0	localizer Cat distractor onset	103	647455
+647.935	0.0	localizer sound coin	31	647935
+650.525	0.0	localizer Cat onset	3	650525
+653.544	0.0	localizer Shoe onset	4	653544
+656.033	0.0	localizer Chair onset	5	656033
+659.304	0.0	localizer Cat onset	3	659304
+662.274	0.0	localizer Chair onset	5	662274
+666.08	0.0	localizer Face distractor onset	101	666080
+666.56	0.0	localizer sound coin	31	666560
+670.335	0.0	localizer Face onset	1	670335
+673.172	0.0	localizer Cat onset	3	673172
+676.176	0.0	localizer House onset	2	676176
+679.597	0.0	localizer House distractor onset	102	679597
+680.127	0.0	localizer sound coin	31	680127
+683.518	0.0	localizer Chair onset	5	683518
+686.957	0.0	localizer House onset	2	686957
+690.528	0.0	localizer Cat onset	3	690528
+693.365	0.0	localizer Face onset	1	693365
+697.137	0.0	localizer Shoe onset	4	697137
+700.641	0.0	localizer Shoe distractor onset	104	700641
+701.222	0.0	localizer sound coin	31	701222
+703.729	0.0	localizer Face onset	1	703729
+706.732	0.0	localizer Chair distractor onset	105	706732
+707.18	0.0	localizer sound coin	31	707180
+711.105	0.0	localizer Chair onset	5	711105
+714.626	0.0	localizer Shoe onset	4	714626
+718.148	0.0	localizer House onset	2	718148
+720.935	0.0	localizer Face onset	1	720935
+724.156	0.0	localizer House onset	2	724156
+727.156	0.0	fixation pre 2	82	727156
+730.662	0.0	cue Face	11	730662
+733.975	0.0	sequence House onset	22	733975
+734.215	0.0	sequence Cat onset	23	734215
+734.449	0.0	sequence Chair onset	25	734449
+734.682	0.0	sequence Face onset	21	734682
+734.916	0.0	sequence Shoe onset	24	734916
+735.15	0.0	Sequence Buffer start	61	735150
+743.221	0.0	Sequence Buffer stop	62	743221
+743.879	0.0	sequencesound coin	71	743879
+744.383	0.0	cue Shoe	14	744383
+747.694	0.0	sequence Face onset	21	747694
+748.3	0.0	sequence House onset	22	748300
+748.918	0.0	sequence Chair onset	25	748918
+749.535	0.0	sequence Shoe onset	24	749535
+750.153	0.0	sequence Cat onset	23	750153
+750.77	0.0	Sequence Buffer start	61	750770
+756.93	0.0	Sequence Buffer stop	62	756930
+757.644	0.0	sequencesound coin	71	757644
+758.165	0.0	cue Cat	13	758165
+761.46	0.0	sequence Face onset	21	761460
+761.618	0.0	sequence House onset	22	761618
+761.785	0.0	sequence Cat onset	23	761785
+761.952	0.0	sequence Shoe onset	24	761952
+762.119	0.0	sequence Chair onset	25	762119
+762.286	0.0	Sequence Buffer start	61	762286
+770.665	0.0	Sequence Buffer stop	62	770665
+771.348	0.0	sequencesound coin	71	771348
+771.849	0.0	cue Cat	13	771849
+775.163	0.0	sequence House onset	22	775163
+775.403	0.0	sequence Chair onset	25	775403
+775.636	0.0	sequence Shoe onset	24	775636
+775.87	0.0	sequence Cat onset	23	775870
+776.104	0.0	sequence Face onset	21	776104
+776.337	0.0	Sequence Buffer start	61	776337
+784.399	0.0	Sequence Buffer stop	62	784399
+785.05	0.0	sequencesound coin	71	785050
+785.551	0.0	cue Cat	13	785551
+788.865	0.0	sequence Chair onset	25	788865
+788.987	0.0	sequence Shoe onset	24	788987
+789.121	0.0	sequence House onset	22	789121
+789.254	0.0	sequence Face onset	21	789254
+789.388	0.0	sequence Cat onset	23	789388
+789.522	0.0	Sequence Buffer start	61	789522
+798.056	0.0	Sequence Buffer stop	62	798056
+798.701	0.0	sequencesound coin	71	798701
+799.203	0.0	cue Chair	15	799203
+802.516	0.0	sequence Cat onset	23	802516
+802.689	0.0	sequence Shoe onset	24	802689
+802.856	0.0	sequence Chair onset	25	802856
+803.022	0.0	sequence House onset	22	803022
+803.189	0.0	sequence Face onset	21	803189
+803.356	0.0	Sequence Buffer start	61	803356
+811.738	0.0	Sequence Buffer stop	62	811738
+812.486	0.0	sequencesound coin	71	812486
+812.989	0.0	cue Shoe	14	812989
+816.301	0.0	sequence House onset	22	816301
+816.924	0.0	sequence Cat onset	23	816924
+817.542	0.0	sequence Chair onset	25	817542
+818.159	0.0	sequence Shoe onset	24	818159
+818.777	0.0	sequence Face onset	21	818777
+819.394	0.0	Sequence Buffer start	61	819394
+825.551	0.0	Sequence Buffer stop	62	825551
+826.254	0.0	sequencesound coin	71	826254
+826.755	0.0	cue Shoe	14	826755
+830.069	0.0	sequence House onset	22	830069
+830.192	0.0	sequence Face onset	21	830192
+830.325	0.0	sequence Chair onset	25	830325
+830.459	0.0	sequence Cat onset	23	830459
+830.592	0.0	sequence Shoe onset	24	830592
+830.726	0.0	Sequence Buffer start	61	830726
+839.26	0.0	Sequence Buffer stop	62	839260
+839.955	0.0	sequencesound coin	71	839955
+858.312	0.0	Break stop	92	858312
+858.323	0.0	fixation pre 1	81	858323
+862.121	0.0	localizer Chair onset	5	862121
+865.174	0.0	localizer Chair distractor onset	105	865174
+865.588	0.0	localizer sound coin	31	865588
+868.729	0.0	localizer Face onset	1	868729
+872.284	0.0	localizer Chair onset	5	872284
+874.837	0.0	localizer Cat onset	3	874837
+877.574	0.0	localizer House onset	2	877574
+880.294	0.0	localizer Shoe onset	4	880294
+883.816	0.0	localizer Face distractor onset	101	883816
+884.33	0.0	localizer sound coin	31	884330
+886.252	0.0	localizer Cat onset	3	886252
+890.04	0.0	localizer Chair onset	5	890040
+893.679	0.0	localizer Shoe distractor onset	104	893679
+894.209	0.0	localizer sound coin	31	894209
+896.966	0.0	localizer Shoe onset	4	896966
+899.854	0.0	localizer Cat distractor onset	103	899854
+900.401	0.0	localizer sound coin	31	900401
+902.974	0.0	localizer Shoe onset	4	902974
+907.447	0.0	localizer House onset	2	907447
+910.267	0.0	localizer Cat onset	3	910267
+913.371	0.0	localizer Cat onset	3	913371
+916.125	0.0	localizer Face onset	1	916125
+918.344	0.0	localizer Face onset	1	918344
+922.166	0.0	localizer Shoe onset	4	922166
+925.387	0.0	localizer Chair onset	5	925387
+928.224	0.0	localizer House distractor onset	102	928224
+928.655	0.0	localizer sound coin	31	928655
+931.863	0.0	localizer House onset	2	931863
+935.467	0.0	localizer Face onset	1	935467
+939.473	0.0	localizer House onset	2	939473
+942.072	0.0	fixation pre 2	82	942072
+945.578	0.0	cue Shoe	14	945578
+948.892	0.0	sequence Face onset	21	948892
+949.048	0.0	sequence House onset	22	949048
+949.215	0.0	sequence Cat onset	23	949215
+949.382	0.0	sequence Shoe onset	24	949382
+949.549	0.0	sequence Chair onset	25	949549
+949.716	0.0	Sequence Buffer start	61	949716
+958.112	0.0	Sequence Buffer stop	62	958112
+958.778	0.0	sequencesound coin	71	958778
+959.281	0.0	cue Chair	15	959281
+962.594	0.0	sequence House onset	22	962594
+963.217	0.0	sequence Cat onset	23	963217
+963.834	0.0	sequence Chair onset	25	963834
+964.452	0.0	sequence Shoe onset	24	964452
+965.069	0.0	sequence Face onset	21	965069
+965.687	0.0	Sequence Buffer start	61	965687
+971.846	0.0	Sequence Buffer stop	62	971846
+972.396	0.0	sequencesound coin	71	972396
+972.897	0.0	cue Chair	15	972897
+976.212	0.0	sequence Cat onset	23	976212
+976.384	0.0	sequence Shoe onset	24	976384
+976.551	0.0	sequence Chair onset	25	976551
+976.718	0.0	sequence House onset	22	976718
+976.885	0.0	sequence Face onset	21	976885
+977.052	0.0	Sequence Buffer start	61	977052
+985.425	0.0	Sequence Buffer stop	62	985425
+986.298	0.0	sequencesound coin	71	986298
+986.799	0.0	cue Chair	15	986799
+990.113	0.0	sequence House onset	22	990113
+990.336	0.0	sequence Cat onset	23	990336
+990.57	0.0	sequence Chair onset	25	990570
+990.803	0.0	sequence Face onset	21	990803
+991.037	0.0	sequence Shoe onset	24	991037
+991.27	0.0	Sequence Buffer start	61	991270
+999.342	0.0	Sequence Buffer stop	62	999342
+1000.016	0.0	sequencesound coin	71	1000016
+1000.519	0.0	cue Cat	13	1000519
+1003.831	0.0	sequence House onset	22	1003831
+1003.97	0.0	sequence Face onset	21	1003970
+1004.104	0.0	sequence Chair onset	25	1004104
+1004.237	0.0	sequence Cat onset	23	1004237
+1004.371	0.0	sequence Shoe onset	24	1004371
+1004.504	0.0	Sequence Buffer start	61	1004504
+1013.05	0.0	Sequence Buffer stop	62	1013050
+1013.75	0.0	sequencesound coin	71	1013750
+1014.253	0.0	cue Face	11	1014253
+1017.566	0.0	sequence Chair onset	25	1017566
+1017.705	0.0	sequence Shoe onset	24	1017705
+1017.839	0.0	sequence House onset	22	1017839
+1017.972	0.0	sequence Face onset	21	1017972
+1018.106	0.0	sequence Cat onset	23	1018106
+1018.239	0.0	Sequence Buffer start	61	1018239
+1026.785	0.0	Sequence Buffer stop	62	1026785
+1027.519	0.0	sequencesound coin	71	1027519
+1028.021	0.0	cue Cat	13	1028021
+1031.334	0.0	sequence Face onset	21	1031334
+1031.941	0.0	sequence House onset	22	1031941
+1032.558	0.0	sequence Chair onset	25	1032558
+1033.176	0.0	sequence Shoe onset	24	1033176
+1033.793	0.0	sequence Cat onset	23	1033793
+1034.411	0.0	Sequence Buffer start	61	1034411
+1040.572	0.0	Sequence Buffer stop	62	1040572
+1041.153	0.0	sequencesound coin	71	1041153
+1041.654	0.0	cue Cat	13	1041654
+1044.969	0.0	sequence House onset	22	1044969
+1045.208	0.0	sequence Chair onset	25	1045208
+1045.442	0.0	sequence Shoe onset	24	1045442
+1045.675	0.0	sequence Cat onset	23	1045675
+1045.909	0.0	sequence Face onset	21	1045909
+1046.143	0.0	Sequence Buffer start	61	1046143
+1054.202	0.0	Sequence Buffer stop	62	1054202
+1054.721	0.0	sequencesound coin	71	1054721
+1055.221	0.0	fixation pre 1	81	1055221
+1059.03	0.0	localizer Shoe onset	4	1059030
+1062.517	0.0	localizer Cat onset	3	1062517
+1065.488	0.0	localizer Cat distractor onset	103	1065488
+1065.919	0.0	localizer sound coin	31	1065919
+1068.626	0.0	localizer House onset	2	1068626
+1072.881	0.0	localizer Face distractor onset	101	1072881
+1073.462	0.0	localizer sound coin	31	1073462
+1075.885	0.0	localizer Cat onset	3	1075885
+1079.273	0.0	localizer Chair onset	5	1079273
+1082.41	0.0	localizer Shoe onset	4	1082410
+1086.065	0.0	localizer Face onset	1	1086065
+1089.77	0.0	localizer Face onset	1	1089770
+1092.974	0.0	localizer Shoe onset	4	1092974
+1095.427	0.0	localizer Chair distractor onset	105	1095427
+1095.942	0.0	localizer sound coin	31	1095942
+1097.664	0.0	localizer Face onset	1	1097664
+1101.069	0.0	localizer House onset	2	1101069
+1104.122	0.0	localizer Chair onset	5	1104122
+1107.593	0.0	localizer Chair onset	5	1107593
+1110.731	0.0	localizer Cat onset	3	1110731
+1114.135	0.0	localizer Shoe onset	4	1114135
+1117.807	0.0	localizer House distractor onset	102	1117807
+1118.238	0.0	localizer sound coin	31	1118238
+1121.529	0.0	localizer House onset	2	1121529
+1124.817	0.0	localizer Cat onset	3	1124817
+1128.171	0.0	localizer Face onset	1	1128171
+1131.425	0.0	localizer Chair onset	5	1131425
+1135.361	0.0	localizer House onset	2	1135361
+1138.651	0.0	localizer Shoe distractor onset	104	1138651
+1139.098	0.0	localizer sound coin	31	1139098
+1141.235	0.0	fixation pre 2	82	1141235
+1144.74	0.0	cue Cat	13	1144740
+1148.052	0.0	sequence Face onset	21	1148052
+1148.21	0.0	sequence House onset	22	1148210
+1148.377	0.0	sequence Cat onset	23	1148377
+1148.544	0.0	sequence Shoe onset	24	1148544
+1148.711	0.0	sequence Chair onset	25	1148711
+1148.878	0.0	Sequence Buffer start	61	1148878
+1157.264	0.0	Sequence Buffer stop	62	1157264
+1157.807	0.0	sequencesound coin	71	1157807
+1158.309	0.0	cue Shoe	14	1158309
+1161.621	0.0	sequence House onset	22	1161621
+1161.862	0.0	sequence Cat onset	23	1161862
+1162.095	0.0	sequence Chair onset	25	1162095
+1162.329	0.0	sequence Face onset	21	1162329
+1162.562	0.0	sequence Shoe onset	24	1162562
+1162.796	0.0	Sequence Buffer start	61	1162796
+1170.869	0.0	Sequence Buffer stop	62	1170869
+1171.475	0.0	sequencesound coin	71	1171475
+1171.978	0.0	cue Cat	13	1171978
+1175.29	0.0	sequence House onset	22	1175290
+1175.413	0.0	sequence Face onset	21	1175413
+1175.546	0.0	sequence Chair onset	25	1175546
+1175.68	0.0	sequence Cat onset	23	1175680
+1175.813	0.0	sequence Shoe onset	24	1175813
+1175.947	0.0	Sequence Buffer start	61	1175947
+1184.474	0.0	Sequence Buffer stop	62	1184474
+1184.993	0.0	sequencesound coin	71	1184993
+1185.495	0.0	cue Shoe	14	1185495
+1188.806	0.0	sequence House onset	22	1188806
+1189.047	0.0	sequence Chair onset	25	1189047
+1189.281	0.0	sequence Shoe onset	24	1189281
+1189.515	0.0	sequence Cat onset	23	1189515
+1189.748	0.0	sequence Face onset	21	1189748
+1189.982	0.0	Sequence Buffer start	61	1189982
+1198.052	0.0	Sequence Buffer stop	62	1198052
+1198.677	0.0	sequencesound coin	71	1198677
+1199.179	0.0	cue Shoe	14	1199179
+1202.492	0.0	sequence Chair onset	25	1202492
+1202.632	0.0	sequence Shoe onset	24	1202632
+1202.765	0.0	sequence House onset	22	1202765
+1202.899	0.0	sequence Face onset	21	1202899
+1203.032	0.0	sequence Cat onset	23	1203032
+1203.166	0.0	Sequence Buffer start	61	1203166
+1211.709	0.0	Sequence Buffer stop	62	1211709
+1212.229	0.0	sequencesound coin	71	1212229
+1212.73	0.0	cue Chair	15	1212730
+1216.042	0.0	sequence Face onset	21	1216042
+1216.65	0.0	sequence House onset	22	1216650
+1217.268	0.0	sequence Chair onset	25	1217268
+1217.885	0.0	sequence Shoe onset	24	1217885
+1218.503	0.0	sequence Cat onset	23	1218503
+1219.12	0.0	Sequence Buffer start	61	1219120
+1225.261	0.0	Sequence Buffer stop	62	1225261
+1225.847	0.0	sequencesound coin	71	1225847
+1226.349	0.0	cue Shoe	14	1226349
+1229.66	0.0	sequence House onset	22	1229660
+1230.268	0.0	sequence Cat onset	23	1230268
+1230.886	0.0	sequence Chair onset	25	1230886
+1231.503	0.0	sequence Shoe onset	24	1231503
+1232.121	0.0	sequence Face onset	21	1232121
+1232.738	0.0	Sequence Buffer start	61	1232738
+1238.892	0.0	Sequence Buffer stop	62	1238892
+1239.447	0.0	sequence sound error	70	1239447
+1239.95	0.0	cue Chair	15	1239950
+1243.262	0.0	sequence Cat onset	23	1243262
+1243.435	0.0	sequence Shoe onset	24	1243435
+1243.602	0.0	sequence Chair onset	25	1243602
+1243.769	0.0	sequence House onset	22	1243769
+1243.936	0.0	sequence Face onset	21	1243936
+1244.103	0.0	Sequence Buffer start	61	1244103
+1252.497	0.0	Sequence Buffer stop	62	1252497
+1253.182	0.0	sequencesound coin	71	1253182
+1268.636	0.0	Break stop	92	1268636
+1268.646	0.0	fixation pre 1	81	1268646
+1272.444	0.0	localizer House onset	2	1272444
+1276.516	0.0	localizer Shoe distractor onset	104	1276516
+1277.013	0.0	localizer sound coin	31	1277013
+1279.136	0.0	localizer Shoe onset	4	1279136
+1282.791	0.0	localizer Cat distractor onset	103	1282791
+1283.338	0.0	localizer sound coin	31	1283338
+1285.794	0.0	localizer Chair onset	5	1285794
+1289.366	0.0	localizer Chair onset	5	1289366
+1292.806	0.0	localizer House onset	2	1292806
+1296.91	0.0	localizer Chair distractor onset	105	1296910
+1297.39	0.0	localizer sound coin	31	1297390
+1300.147	0.0	localizer Face onset	1	1300147
+1303.187	0.0	localizer Cat onset	3	1303187
+1306.59	0.0	localizer House onset	2	1306590
+1310.027	0.0	localizer Cat onset	3	1310027
+1312.764	0.0	localizer Cat onset	3	1312764
+1316.468	0.0	localizer Shoe onset	4	1316468
+1320.007	0.0	localizer Face onset	1	1320007
+1322.994	0.0	localizer House distractor onset	102	1322994
+1323.458	0.0	localizer sound coin	31	1323458
+1326.131	0.0	localizer Face onset	1	1326131
+1329.185	0.0	localizer Shoe onset	4	1329185
+1332.055	0.0	localizer Chair onset	5	1332055
+1335.326	0.0	localizer Cat onset	3	1335326
+1338.114	0.0	localizer Face distractor onset	101	1338114
+1338.594	0.0	localizer sound coin	31	1338594
+1342.236	0.0	localizer Face onset	1	1342236
+1345.407	0.0	localizer Chair onset	5	1345407
+1348.677	0.0	localizer Shoe onset	4	1348677
+1352.099	0.0	localizer House onset	2	1352099
+1354.866	0.0	fixation pre 2	82	1354866
+1358.371	0.0	cue Chair	15	1358371
+1361.684	0.0	sequence Face onset	21	1361684
+1362.309	0.0	sequence House onset	22	1362309
+1362.926	0.0	sequence Chair onset	25	1362926
+1363.544	0.0	sequence Shoe onset	24	1363544
+1364.161	0.0	sequence Cat onset	23	1364161
+1364.779	0.0	Sequence Buffer start	61	1364779
+1370.932	0.0	Sequence Buffer stop	62	1370932
+1371.538	0.0	sequencesound coin	71	1371538
+1372.041	0.0	cue Cat	13	1372041
+1375.353	0.0	sequence House onset	22	1375353
+1375.96	0.0	sequence Cat onset	23	1375960
+1376.578	0.0	sequence Chair onset	25	1376578
+1377.195	0.0	sequence Shoe onset	24	1377195
+1377.813	0.0	sequence Face onset	21	1377813
+1378.43	0.0	Sequence Buffer start	61	1378430
+1384.589	0.0	Sequence Buffer stop	62	1384589
+1385.173	0.0	sequencesound coin	71	1385173
+1385.675	0.0	cue Shoe	14	1385675
+1388.988	0.0	sequence Cat onset	23	1388988
+1389.144	0.0	sequence Shoe onset	24	1389144
+1389.311	0.0	sequence Chair onset	25	1389311
+1389.478	0.0	sequence House onset	22	1389478
+1389.645	0.0	sequence Face onset	21	1389645
+1389.812	0.0	Sequence Buffer start	61	1389812
+1398.193	0.0	Sequence Buffer stop	62	1398193
+1398.924	0.0	sequencesound coin	71	1398924
+1399.426	0.0	cue Face	11	1399426
+1402.739	0.0	sequence Chair onset	25	1402739
+1402.879	0.0	sequence Shoe onset	24	1402879
+1403.012	0.0	sequence House onset	22	1403012
+1403.146	0.0	sequence Face onset	21	1403146
+1403.279	0.0	sequence Cat onset	23	1403279
+1403.413	0.0	Sequence Buffer start	61	1403413
+1411.954	0.0	Sequence Buffer stop	62	1411954
+1412.809	0.0	sequencesound coin	71	1412809
+1413.312	0.0	cue Cat	13	1413312
+1416.623	0.0	sequence House onset	22	1416623
+1416.747	0.0	sequence Face onset	21	1416747
+1416.88	0.0	sequence Chair onset	25	1416880
+1417.014	0.0	sequence Cat onset	23	1417014
+1417.147	0.0	sequence Shoe onset	24	1417147
+1417.281	0.0	Sequence Buffer start	61	1417281
+1425.819	0.0	Sequence Buffer stop	62	1425819
+1426.394	0.0	sequencesound coin	71	1426394
+1426.897	0.0	cue Shoe	14	1426897
+1430.209	0.0	sequence House onset	22	1430209
+1430.449	0.0	sequence Cat onset	23	1430449
+1430.682	0.0	sequence Chair onset	25	1430682
+1430.916	0.0	sequence Face onset	21	1430916
+1431.149	0.0	sequence Shoe onset	24	1431149
+1431.383	0.0	Sequence Buffer start	61	1431383
+1439.449	0.0	Sequence Buffer stop	62	1439449
+1440.011	0.0	sequencesound coin	71	1440011
+1440.513	0.0	cue Cat	13	1440513
+1443.827	0.0	sequence Face onset	21	1443827
+1443.999	0.0	sequence House onset	22	1443999
+1444.166	0.0	sequence Cat onset	23	1444166
+1444.333	0.0	sequence Shoe onset	24	1444333
+1444.5	0.0	sequence Chair onset	25	1444500
+1444.667	0.0	Sequence Buffer start	61	1444667
+1453.054	0.0	Sequence Buffer stop	62	1453054
+1454.013	0.0	sequencesound coin	71	1454013
+1454.516	0.0	cue Face	11	1454516
+1457.829	0.0	sequence House onset	22	1457829
+1458.051	0.0	sequence Chair onset	25	1458051
+1458.285	0.0	sequence Shoe onset	24	1458285
+1458.519	0.0	sequence Cat onset	23	1458519
+1458.752	0.0	sequence Face onset	21	1458752
+1458.986	0.0	Sequence Buffer start	61	1458986
+1467.049	0.0	Sequence Buffer stop	62	1467049
+1467.598	0.0	sequencesound coin	71	1467598
+1468.099	0.0	fixation pre 1	81	1468099
+1471.907	0.0	localizer Cat onset	3	1471907
+1475.244	0.0	localizer Shoe onset	4	1475244
+1478.983	0.0	localizer Shoe onset	4	1478983
+1482.821	0.0	localizer House distractor onset	102	1482821
+1483.335	0.0	localizer sound coin	31	1483335
+1486.609	0.0	localizer Cat onset	3	1486609
+1489.363	0.0	localizer House onset	2	1489363
+1493.368	0.0	localizer Chair onset	5	1493368
+1496.506	0.0	localizer Chair onset	5	1496506
+1499.526	0.0	localizer Shoe distractor onset	104	1499526
+1500.04	0.0	localizer sound coin	31	1500040
+1502.897	0.0	localizer Face onset	1	1502897
+1505.951	0.0	localizer Shoe onset	4	1505951
+1509.005	0.0	localizer Chair onset	5	1509005
+1511.892	0.0	localizer Cat distractor onset	103	1511892
+1512.406	0.0	localizer sound coin	31	1512406
+1515.013	0.0	localizer Face onset	1	1515013
+1517.633	0.0	localizer Face onset	1	1517633
+1520.904	0.0	localizer Cat onset	3	1520904
+1523.391	0.0	localizer Chair distractor onset	105	1523391
+1523.905	0.0	localizer sound coin	31	1523905
+1526.695	0.0	localizer Face onset	1	1526695
+1530.216	0.0	localizer Chair onset	5	1530216
+1534.84	0.0	localizer House onset	2	1534840
+1538.928	0.0	localizer Face distractor onset	101	1538928
+1539.392	0.0	localizer sound coin	31	1539392
+1541.748	0.0	localizer House onset	2	1541748
+1544.969	0.0	localizer House onset	2	1544969
+1548.558	0.0	localizer Shoe onset	4	1548558
+1551.244	0.0	localizer Cat onset	3	1551244
+1553.794	0.0	fixation pre 2	82	1553794
+1557.301	0.0	cue Cat	13	1557301
+1560.612	0.0	sequence House onset	22	1560612
+1560.837	0.0	sequence Chair onset	25	1560837
+1561.07	0.0	sequence Shoe onset	24	1561070
+1561.304	0.0	sequence Cat onset	23	1561304
+1561.537	0.0	sequence Face onset	21	1561537
+1561.771	0.0	Sequence Buffer start	61	1561771
+1569.851	0.0	Sequence Buffer stop	62	1569851
+1570.466	0.0	sequencesound coin	71	1570466
+1570.968	0.0	cue Shoe	14	1570968
+1574.281	0.0	sequence Face onset	21	1574281
+1574.455	0.0	sequence House onset	22	1574455
+1574.622	0.0	sequence Cat onset	23	1574622
+1574.788	0.0	sequence Shoe onset	24	1574788
+1574.955	0.0	sequence Chair onset	25	1574955
+1575.122	0.0	Sequence Buffer start	61	1575122
+1583.507	0.0	Sequence Buffer stop	62	1583507
+1584.135	0.0	sequence sound error	70	1584135
+1584.636	0.0	cue Shoe	14	1584636
+1587.95	0.0	sequence House onset	22	1587950
+1588.089	0.0	sequence Face onset	21	1588089
+1588.223	0.0	sequence Chair onset	25	1588223
+1588.356	0.0	sequence Cat onset	23	1588356
+1588.49	0.0	sequence Shoe onset	24	1588490
+1588.623	0.0	Sequence Buffer start	61	1588623
+1597.164	0.0	Sequence Buffer stop	62	1597164
+1597.819	0.0	sequencesound coin	71	1597819
+1598.322	0.0	cue Face	11	1598322
+1601.634	0.0	sequence House onset	22	1601634
+1601.857	0.0	sequence Cat onset	23	1601857
+1602.091	0.0	sequence Chair onset	25	1602091
+1602.325	0.0	sequence Face onset	21	1602325
+1602.558	0.0	sequence Shoe onset	24	1602558
+1602.792	0.0	Sequence Buffer start	61	1602792
+1610.873	0.0	Sequence Buffer stop	62	1610873
+1611.521	0.0	sequencesound coin	71	1611521
+1612.024	0.0	cue Chair	15	1612024
+1615.336	0.0	sequence House onset	22	1615336
+1615.943	0.0	sequence Cat onset	23	1615943
+1616.56	0.0	sequence Chair onset	25	1616560
+1617.178	0.0	sequence Shoe onset	24	1617178
+1617.795	0.0	sequence Face onset	21	1617795
+1618.413	0.0	Sequence Buffer start	61	1618413
+1624.555	0.0	Sequence Buffer stop	62	1624555
+1625.289	0.0	sequencesound coin	71	1625289
+1625.792	0.0	cue Cat	13	1625792
+1629.104	0.0	sequence Chair onset	25	1629104
+1629.243	0.0	sequence Shoe onset	24	1629243
+1629.377	0.0	sequence House onset	22	1629377
+1629.51	0.0	sequence Face onset	21	1629510
+1629.644	0.0	sequence Cat onset	23	1629644
+1629.777	0.0	Sequence Buffer start	61	1629777
+1638.316	0.0	Sequence Buffer stop	62	1638316
+1638.957	0.0	sequencesound coin	71	1638957
+1639.459	0.0	cue Shoe	14	1639459
+1642.77	0.0	sequence Face onset	21	1642770
+1643.379	0.0	sequence House onset	22	1643379
+1643.996	0.0	sequence Chair onset	25	1643996
+1644.614	0.0	sequence Shoe onset	24	1644614
+1645.231	0.0	sequence Cat onset	23	1645231
+1645.849	0.0	Sequence Buffer start	61	1645849
+1651.999	0.0	Sequence Buffer stop	62	1651999
+1652.642	0.0	sequencesound coin	71	1652642
+1653.144	0.0	cue Chair	15	1653144
+1656.457	0.0	sequence Cat onset	23	1656457
+1656.629	0.0	sequence Shoe onset	24	1656629
+1656.796	0.0	sequence Chair onset	25	1656796
+1656.963	0.0	sequence House onset	22	1656963
+1657.13	0.0	sequence Face onset	21	1657130
+1657.297	0.0	Sequence Buffer start	61	1657297
+1665.681	0.0	Sequence Buffer stop	62	1665681
+1666.309	0.0	sequencesound coin	71	1666309

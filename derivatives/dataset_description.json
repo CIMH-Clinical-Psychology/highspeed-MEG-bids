@@ -1,0 +1,12 @@
+{
+    "Name": "mne-bids-pipeline outputs",
+    "BIDSVersion": "1.9.0",
+    "PipelineDescription": {
+        "Name": "mne-bids-pipeline",
+        "Version": "1.10.0",
+        "CodeURL": "https://github.com/mne-tools/mne-bids-pipeline"
+    },
+    "SourceDatasets": {
+        "URL": "n/a"
+    }
+}
