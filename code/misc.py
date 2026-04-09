@@ -31,7 +31,10 @@ def check_and_fix_channels(raw):
     """check for missing channels or empty channels or NaN channels"""
     report = {'filename': os.path.basename(raw._filenames[0]),
               'missing': []}
-    template_info = mne.io.read_info('template-info.fif')
+    cwd = os.path.dirname(os.path.abspath(vars().get('__file__', './misc.py')))
+    template_file = os.path.join(cwd, 'template-info.fif')
+
+    template_info = mne.io.read_info(template_file)
 
     ch_types = {'BIO001': 'bio',
                 'BIO002': 'bio',
