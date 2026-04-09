@@ -21,9 +21,11 @@ from stimer import ContextProfiler
 cfg = dotenv_values(f'{os.path.dirname(__file__)}/config.env')
 raw_files_folder = cfg['RAW_DIR']
 
-bids_root_path = os.path.abspath(os.path.dirname(vars().get('__file__', '')) + '/../')
-# bids_root = BIDSPath(root=bids_root_path)
+bids_root_path = os.path.abspath(os.path.dirname(globals().get('__file__', '.')) + '/../')
 
+if os.path.isfile(bids_root_path + '/README'):
+    # remove empty README else BIDS complains
+    os.remove(bids_root_path + '/README')
 
 subjects = sorted([x for x in os.listdir(f'{raw_files_folder}/data-MEG/') if x.startswith('mfr')])
 
