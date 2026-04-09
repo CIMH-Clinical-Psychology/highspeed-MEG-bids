@@ -2,9 +2,21 @@
 
 BIDS dataset for the MEG replication of Wittkuhn et al 2021.
 
-## Creating the BIDS-dataset
+## Download
 
-This repository already contains the final BIDS dataset. For most purposes you can stop reading here. If you have the raw data, you can replicate the process by the following commands to convert the raw data to BIDS. The raw data have not been uploaded, so this is more for transparency and as a reminder for myself. Note: Beforehand you might need to edit the path to the raw data in your `code/config.env`
+The data is hosted at G-Node. You can download the BIDS dataset, including some preprocessed files via the following commands:
+
+XXX
+
+## Usage
+
+To use the data, please refer to the FASTIMAGES-benchmark repository.
+
+## Appendix: Recreating the BIDS-dataset
+
+This repository already contains the final BIDS dataset. For most purposes you can stop reading here. If you have the raw data, you can replicate the process by the following commands to convert the raw data to BIDS. The raw data have not been uploaded, so this is more for transparency and as a reminder for myself. 
+
+Beforehand you might need to edit the path to the raw data in your `code/config.env`
 
 
 
@@ -12,22 +24,21 @@ This repository already contains the final BIDS dataset. For most purposes you c
 
 first we need to run maxfilter on the raw data. Some records had missing cHPI segments, but `mne` handles that by interpolating the segment's cHPI positions.
 
-run it either by `python code/run_maxfilter.py` or if you have SLURM, use the `run_maxfilter.sbatch` script. This will add the `*_tsss.fif` files to your raw files directory.
+run it either by `python code/run_maxfilter.py` or if you have SLURM, use the `run_maxfilter.sbatch` script. This will add the `*_etsss.fif` files to your raw files directory.
 
 #### 2. run anatomical preprocessing and defacing
 
-sha
+next run the following in that order to create the venv, run anatomical preprocessing and defacing and then finally copy the MEG data to the BIDS dir
 
 ```bash
 make venv
 make install
 make anat
 make defacing
-make bids
-
+make meg
 ```
 
-References
+## References
 
 Appelhoff, S., Sanderson, M., Brooks, T., Vliet, M., Quentin, R., Holdgraf, C., Chaumon, M., Mikulan, E., Tavabi, K., Höchenberger, R., Welke, D., Brunner, C., Rockhill, A., Larson, E., Gramfort, A. and Jas, M. (2019). MNE-BIDS: Organizing electrophysiological data into the BIDS format and facilitating their analysis. Journal of Open Source Software 4: (1896).https://doi.org/10.21105/joss.01896
 
