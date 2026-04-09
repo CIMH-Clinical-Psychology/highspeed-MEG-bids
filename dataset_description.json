@@ -1,12 +1,13 @@
 {
-    "Name": "TODO: name of the dataset",
+    "Name": "highspeed-MEG-bids",
     "BIDSVersion": "1.8.0",
-    "License": "TODO: choose a license, e.g. PDDL (http://opendatacommons.org/licenses/pddl/)",
+    "License": "Creative Commons 4.0",
     "Authors": [
-        "TODO:",
-        "First1 Last1",
-        "First2 Last2",
-        "..."
+        "Simon Kern:",
+        "Lennart Wittkuhn",
+        "Elena Buss",
+        "Nico Schuck",
+        "Gordon Feld"
     ],
     "Acknowledgements": "TODO: whom you want to acknowledge",
     "HowToAcknowledge": "TODO: describe how to acknowledge -- either cite a corresponding paper, or just in acknowledgement section",
