@@ -31,7 +31,7 @@ def check_and_fix_channels(raw):
     """check for missing channels or empty channels or NaN channels"""
     report = {'filename': os.path.basename(raw._filenames[0]),
               'missing': []}
-    cwd = os.path.dirname(os.path.abspath(vars().get('__file__', './misc.py')))
+    cwd = os.path.dirname(os.path.abspath(globals().get('__file__', '/code/misc.py')))
     template_file = os.path.join(cwd, 'template-info.fif')
 
     template_info = mne.io.read_info(template_file)
@@ -197,8 +197,3 @@ def list_files(path, exts=None, patterns=None, relative=False, recursive=False,
     files = [str(file) for file in files]
     files = set(files)  # filter duplicates
     return sorted(files, key=natsort_key)
-
-if __name__=='__main__':
-    import mne
-    raw = mne.io.read_raw('/zi/flstorage/group_klips/data/data/Simon/highspeed/highspeed-MEG-raw/data-MEG/mfr_03/MFR03_main_trans[MFR03_main]_tsss_mc.fif', preload=True)
-    check_and_fix_channels(raw)
